@@ -1,18 +1,25 @@
 console.log("I'm linked!");
 
-function Card(option) {
-  this.img = option.img;
-  this.isFlipped = option.isFlipped;
-  this.matchFound = option.matchFound;
-};
+$(document).ready(function(){
+  console.log("jquery ready!");
 
-function User(option) {
-  this.score = option.score;
-  this.name = option.name;
-};
+      function Card(options) {
+        this.face = options.face;
+        this.isFlipped = options.isFlipped;
+        this.matchFound = options.matchFound;
+      };
 
-function Game(option) {
-  this.spot = option.spot;
-  // shuffle function
-  // match function
-};
+      function User(options) {
+        this.score = options.score;
+        this.name = options.name;
+      };
+
+      function Game(options) {
+        this.spot = options.spot;
+        // shuffle function
+        // match function
+      };
+
+var newCard = new Card({face: "JUstin", isFlipped: false, matchFound: false});
+console.log(newCard)
+});

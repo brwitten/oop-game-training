@@ -6,8 +6,12 @@ $(document).ready(function(){
   $('#box1').on('click', imageAppear);
 
   function imageAppear(event) {
+    var id = event.currentTarget; // identifying DOM object that was clicked
+    var square = event.currentTarget.id; // storing specific ID that was clicked
+    console.log(id);
+    console.log(square);
     alert("hello!");
-    console.log("function called");
+    // $(id).html(Card[0].face);
   };
 
       function Card(options) {
@@ -23,9 +27,14 @@ $(document).ready(function(){
 
       function Game(options) {
         this.spot = options.spot;
+        this.card = options.card;
         // shuffle function
         // match function
       };
+
+// create 12 spots using [] array within the Game function
+// we will then prototype Card objects into the Game objects
+// the game objects will coorespond with the HTML IDs on the board
 
 var Justin1 = new Card({face: "Justin", isFlipped: false, matchFound: false});
 var Justin2 = new Card({face: "Justin", isFlipped: false, matchFound: false});
@@ -40,6 +49,23 @@ var Nick2 = new Card({face: "Nick", isFlipped: false, matchFound: false});
 var Kenneth1 = new Card({face: "Kenneth", isFlipped: false, matchFound: false});
 var Kenneth2 = new Card({face: "Kenneth", isFlipped: false, matchFound: false});
 
+var box1 = new Game({spot:"box1", card:""});
+var box2 = new Game({spot:"box2", card:""});
+var box3 = new Game({spot:"box3", card:""});
+var box4 = new Game({spot:"box4", card:""});
+var box5 = new Game({spot:"box5", card:""});
+var box6 = new Game({spot:"box6", card:""});
+var box7 = new Game({spot:"box7", card:""});
+var box8 = new Game({spot:"box8", card:""});
+var box9 = new Game({spot:"box9", card:""});
+var box10 = new Game({spot:"box10", card:""});
+var box11 = new Game({spot:"box11", card:""});
+var box12 = new Game({spot:"box12", card:""});
+
 console.log(Nick1);
+console.log(box1);
+
+box1.card = Justin1;
+console.log(box1);
 
 });

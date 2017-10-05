@@ -1,3 +1,7 @@
-.col-sm-3 {
+.col-sm-3{
   border: 2px solid black;
+}
+
+#box1 {
+  background: red;
 }

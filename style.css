@@ -1,3 +1,7 @@
+h1 {
+  align-items: center;
+}
+
 .col-sm-3{
   border: 2px solid black;
 }

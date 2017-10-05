@@ -5,15 +5,6 @@ $(document).ready(function(){
 
   $('#box1').on('click', imageAppear);
 
-  function imageAppear(event) {
-    var id = event.currentTarget; // identifying DOM object that was clicked
-    var square = event.currentTarget.id; // storing specific ID that was clicked
-    console.log(id);
-    console.log(square);
-    alert("hello!");
-    // $(id).html(Card[0].face);
-  };
-
       function Card(options) {
         this.face = options.face;
         this.isFlipped = options.isFlipped;
@@ -74,5 +65,18 @@ for (i=0; i < deckOfCards.length; i++) {
 };
 
 console.log(wholeBoard);
+
+function imageAppear(event) {
+  var id = event.currentTarget; // identifying DOM object that was clicked
+  var square = event.currentTarget.id; // storing specific ID that was clicked
+  console.log(id);
+  console.log(square);
+  alert("hello!");
+  console.log(wholeBoard[0].spot);
+  // if id ===
+  // $(id).html(Card[0].face);
+};
+
+// if id (box clicked) = box[i].spot then use jquery to update the image to background color
 
 });

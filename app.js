@@ -32,10 +32,6 @@ $(document).ready(function(){
         // match function
       };
 
-// create 12 spots using [] array within the Game function
-// we will then prototype Card objects into the Game objects
-// the game objects will coorespond with the HTML IDs on the board
-
 var Justin1 = new Card({face: "Justin", isFlipped: false, matchFound: false});
 var Justin2 = new Card({face: "Justin", isFlipped: false, matchFound: false});
 var Kay1 = new Card({face: "Kay", isFlipped: false, matchFound: false});
@@ -48,6 +44,8 @@ var Nick1 = new Card({face: "Nick", isFlipped: false, matchFound: false});
 var Nick2 = new Card({face: "Nick", isFlipped: false, matchFound: false});
 var Kenneth1 = new Card({face: "Kenneth", isFlipped: false, matchFound: false});
 var Kenneth2 = new Card({face: "Kenneth", isFlipped: false, matchFound: false});
+
+var deckOfCards = [Justin1, Justin2, Kay1, Kay2, Masha1, Masha2, Beth1, Beth2, Nick1, Nick2, Kenneth1, Kenneth2];
 
 var box1 = new Game({spot:"box1", card:""});
 var box2 = new Game({spot:"box2", card:""});
@@ -62,10 +60,19 @@ var box10 = new Game({spot:"box10", card:""});
 var box11 = new Game({spot:"box11", card:""});
 var box12 = new Game({spot:"box12", card:""});
 
-console.log(Nick1);
-console.log(box1);
+var wholeBoard = [box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12];
 
-box1.card = Justin1;
-console.log(box1);
+// console.log(Card);
+//
+// box1.card = Justin1;
+// console.log(box1);
+
+// push Card values into Board
+
+for (i=0; i < deckOfCards.length; i++) {
+  wholeBoard[i].card = deckOfCards[i];
+};
+
+console.log(wholeBoard);
 
 });
